@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Tablero } from './components/Tablero';
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
 
 
 ReactDOM.render(
-  
-    <Tablero/>,
+    
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   
   document.getElementById('root')
 );

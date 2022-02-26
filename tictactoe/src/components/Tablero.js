@@ -31,8 +31,6 @@ export const Tablero = () => {
         estado = `Turno de ${isX ? 'X':'0'}`;
     }
 
-
-
     return (
         <>
         <div className="estado"><h2>{estado}</h2></div>
@@ -52,7 +50,9 @@ export const Tablero = () => {
 }
 
 
-function calcularGanador(casillas) {
+
+
+function calcularGanador(casillas, isX) {
     const  patronesGanadores = [
         [0, 1, 2],
         [3, 4, 5],
@@ -67,9 +67,34 @@ function calcularGanador(casillas) {
     for (let i = 0; i < patronesGanadores.length; i++) {
         const [a, b, c] = patronesGanadores[i];
         if (casillas[a] && casillas[a] === casillas[b] && casillas[a] === casillas[c]) {
+            
+            const date = Date.now();
+            
+            // Guardamos los datos
+            const newPerson = { 
+                name: casillas[a],
+                position: "Primero",
+                level: date,
+               };
+        
+            fetch("https://api.alvaroserver.es/record/add", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(newPerson),
+            })
+            .catch(error => {
+              window.alert(error);
+              return;
+            });
+
+            
             return casillas[a];
+            
         }
     }
-
     return null;
 }
+
+
