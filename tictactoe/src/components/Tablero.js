@@ -23,6 +23,7 @@ export const Tablero = () => {
     const ganador = calcularGanador(casillas);
 
     let estado;
+    
     if (ganador) {
         estado = `Ganador: ${ganador}`;
     }
