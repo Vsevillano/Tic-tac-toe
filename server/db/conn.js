@@ -1,6 +1,8 @@
 const { MongoClient } = require("mongodb");
 
-const Db = 'mongodb://root:Small01Dev*@18.168.65.40:27017/tictactoe?authSource=admin&authMechanism=SCRAM-SHA-256';
+require("dotenv").config({ path: "./config.env" });
+
+const Db = process.env.CONN_URL;
 
 const client = new MongoClient(Db, {
     useNewUrlParser: true,

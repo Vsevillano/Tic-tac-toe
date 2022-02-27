@@ -10,6 +10,8 @@ import RecordList from "./components/recordList";
 import Edit from "./components/edit";
 import Create from "./components/create";
 import { Tablero } from './components/Tablero';
+import { Login } from './components/Login';
+import { Registro } from './components/Registro';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route exact path="/list" element={<RecordList />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/create" element={<Create />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/registrar" element={<Registro />} />
       </Routes>
       
       </div>
