@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 // We use Route in order to define the different routes of our application
