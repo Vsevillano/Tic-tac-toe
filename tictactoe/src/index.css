@@ -42,4 +42,5 @@ code {
   text-align: justify;
   color: red;
   background-image: url('hola.jpg');
+  background-position: 0ch;
 }
