@@ -36,3 +36,10 @@ code {
   text-align: center;
   margin-bottom: 2rem;
 }
+
+
+.adrian{
+  text-align: justify;
+  color: red;
+  background-image: url('hola.jpg');
+}
