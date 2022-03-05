@@ -22,8 +22,8 @@ function App() {
         <Route exact path="/list" element={<RecordList />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/create" element={<Create />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/registrar" element={<Registro />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registrar" element={<Registro />} />
       </Routes>
       
       </div>

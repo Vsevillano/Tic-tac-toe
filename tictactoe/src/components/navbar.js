@@ -25,6 +25,9 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/login">Iniciar sesión</a>
+            </li>                
+            <li className="nav-item">
+              <a className="nav-link" href="/register">Registrar</a>
             </li>                        
           </ul>
         </div>
